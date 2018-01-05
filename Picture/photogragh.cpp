@@ -1,4 +1,6 @@
-#include "opencv2/opencv.hpp"
+/** Used to take pictures **/
+#include <opencv2/opencv.hpp>
+#include <iostream>
 
 using namespace std;
 using namespace cv;
@@ -11,9 +13,6 @@ int main(void){
 	VideoCapture capture = VideoCapture(0);
 	Mat frame, frame_gray;
 	int i = 1;
-
-	if(!capture.isOpened())
-		PANIC("Error open camera");
 
 	cout << "Press p to take a picture" << endl;
 	while(1){
