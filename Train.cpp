@@ -4,7 +4,7 @@
 #include <math.h>
 
 #include <opencv2/opencv.hpp>
-#include "facerec.hpp"
+#include <opencv2/face.hpp>
 
 using namespace cv;
 using namespace std;
@@ -48,7 +48,7 @@ static void read_csv(const string& filename, vector<Mat>& images, vector<int>& l
 }
 
 
-int main() 
+int main(void) 
 {
 
     //读取你的CSV文件路径.
