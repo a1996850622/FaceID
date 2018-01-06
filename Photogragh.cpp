@@ -23,7 +23,7 @@ int main(void){
 		if(frame.empty())
             PANIC("Error capture frame");
 
-		String filename = format("picture%d.jpg", i);
+		String filename = format("Picture/picture%d.jpg", i);
 
 		/** Press p to take pictures **/
 		switch(key){

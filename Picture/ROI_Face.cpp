@@ -11,10 +11,10 @@ void PANIC(char *msg);
 #define PANIC(msg){perror(msg); exit(-1);}
 
 /** Gloabal variables **/
-String face_cascade_name = "../Source/haarcascade_frontalface_default.xml";
-String eyes_cascade_name = "../Source/haarcascade_eye_tree_eyeglasses.xml";
+String face_cascade_name = "Source/haarcascade_frontalface_default.xml";
+// String eyes_cascade_name = "Source/haarcascade_eye_tree_eyeglasses.xml";
 CascadeClassifier face_cascade; // Define the face classifier
-CascadeClassifier eyes_cascade; // Define the eyes classifier
+// CascadeClassifier eyes_cascade; // Define the eyes classifier
 
 int main(int argc, char *argv[]){
 	Mat image_gray;
@@ -29,7 +29,7 @@ int main(int argc, char *argv[]){
 	char *filename = argv[1];
 	char *output = argv[2];
 
-	if (!face_cascade.load(face_cascade_name)) 
+	if (!face_cascade.load(face_cascade_name))
 		PANIC("Error loading face cascade");
 	if (!eyes_cascade.load(eyes_cascade_name))
 		PANIC("Error loading eyes cascade");
