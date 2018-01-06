@@ -11,7 +11,7 @@ void PANIC(char *msg);
 #define PANIC(msg){perror(msg); exit(-1);}
 
 /** Gloabal variables **/
-String face_cascade_name = "Source/haarcascade_frontalface_default.xml";
+String face_cascade_name = "../Source/haarcascade_frontalface_default.xml";
 // String eyes_cascade_name = "Source/haarcascade_eye_tree_eyeglasses.xml";
 CascadeClassifier face_cascade; // Define the face classifier
 // CascadeClassifier eyes_cascade; // Define the eyes classifier
@@ -31,8 +31,8 @@ int main(int argc, char *argv[]){
 
 	if (!face_cascade.load(face_cascade_name))
 		PANIC("Error loading face cascade");
-	if (!eyes_cascade.load(eyes_cascade_name))
-		PANIC("Error loading eyes cascade");
+	// if (!eyes_cascade.load(eyes_cascade_name))
+		// PANIC("Error loading eyes cascade");
 
     Mat image = imread(filename, IMREAD_COLOR);
 
@@ -40,7 +40,7 @@ int main(int argc, char *argv[]){
     equalizeHist(image_gray, image_gray);
 
     // Detect faces of different sizes using cascade classifier
-    face_cascade.detectMultiScale(image_gray, faces, 1.1, 5, CV_HAAR_SCALE_IMAGE, Size(30, 30));
+    face_cascade.detectMultiScale(image_gray, faces, 1.05, 8, CV_HAAR_SCALE_IMAGE, Size(30, 30));
 
     for (size_t j = 0; j < faces.size(); j++){
         Mat faceROI = image(faces[j]);
