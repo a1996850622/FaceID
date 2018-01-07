@@ -22,3 +22,5 @@ FaceRecognition
 Source/MyFaceFisherModel.xml
 Source/MyFaceLBPHModel.xml
 Source/MyFacePCAModel.xml
+server/att_faces/at.txt
+
