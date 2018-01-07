@@ -19,6 +19,7 @@ Train
 Photogragh
 FaceRecognition
 
+att_faces/at.txt
 Source/MyFaceFisherModel.xml
 Source/MyFaceLBPHModel.xml
 Source/MyFacePCAModel.xml
