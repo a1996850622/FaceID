@@ -19,6 +19,7 @@ CascadeClassifier face_cascade;
 
 int main(void){
 	int flag = 10;
+	int flag2 = 10;
 	Mat frame;
 	Mat frame_gray;
 	Mat face;
@@ -75,11 +76,18 @@ int main(void){
 			predictPCA = model->predict(face_test);
 
 		cout << predictPCA << endl;
-		if(predictPCA == 40){
+		if(predictPCA == 41){
 			string name = "WenYuanChen";
 			/* Put text on the frame */
 			putText(frame, name, test_1b, FONT_HERSHEY_COMPLEX, 2, Scalar(0, 0, 255));
-			flag = flag-1;
+			flag = flag - 1;
+		}
+
+		if(predictPCA == 32){
+			string name = "Jxy";
+			/* Put text on the frame */
+			putText(frame, name, test_1b, FONT_HERSHEY_COMPLEX, 2, Scalar(0, 0, 255));
+			flag2 = flag2 - 1;
 		}
 
 		imshow("face", frame);
@@ -87,7 +95,7 @@ int main(void){
 		if(waitKey(50) >= 0)
 			stop = true;
 
-		if(flag == 0) 
+		if(flag == 0 || flag2 == 0) 
 			stop = true;
 
 	}
