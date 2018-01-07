@@ -40,7 +40,7 @@ int main(int argc, char *argv[]){
     equalizeHist(image_gray, image_gray);
 
     // Detect faces of different sizes using cascade classifier
-    face_cascade.detectMultiScale(image_gray, faces, 1.05, 8, CV_HAAR_SCALE_IMAGE, Size(30, 30));
+    face_cascade.detectMultiScale(image_gray, faces, 1.05, 5, CV_HAAR_SCALE_IMAGE, Size(30, 30));
 
     for (size_t j = 0; j < faces.size(); j++){
         Mat faceROI = image(faces[j]);
