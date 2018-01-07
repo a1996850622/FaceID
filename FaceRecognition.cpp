@@ -76,6 +76,7 @@ int main(void){
 		cout << predictPCA << endl;
 		if(predictPCA == 40){
 			string name = "WenYuanChen";
+			/* Put text on the frame */
 			putText(frame, name, test_1b, FONT_HERSHEY_COMPLEX, 2, Scalar(0, 0, 255));
 		}
 
