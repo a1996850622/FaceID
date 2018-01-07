@@ -1,4 +1,24 @@
+# Python:
+.idea/
+__pycache__/
+*.pyc
+
+# Visual Studio
+.vs/
+
+# Windows:
+*.lnk
+Thumbs.db
+
+# Private:
+test.py
+
+# Poject:
 auto.sh
 Train
 Photogragh
 FaceRecognition
+
+Source/MyFaceFisherModel.xml
+Source/MyFaceLBPHModel.xml
+Source/MyFacePCAModel.xml
